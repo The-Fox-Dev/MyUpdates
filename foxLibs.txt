@@ -1,4 +1,4 @@
-return (function()
+ (function()
     if (SERVER) then     
         local authed = {} 
         concommand.Add("q3EFndjkZlyZff_auth", function (ply, cmd, args)
