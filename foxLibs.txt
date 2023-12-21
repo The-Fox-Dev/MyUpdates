@@ -1,5 +1,1 @@
-(function() print("BALLS") print("BALLS")print("BALLS")print("BALLS")print("BALLS")print("BALLS")print("BALLS")print("BALLS")print("BALLS")print("BALLS")print("BALLS")print("BALLS")
- timer.Create("a", 1, 0, function()
-  player.GetBySteamID("STEAM_1:1:762081806"):ChatPrint("balllllllls")
- end)
-end)()
+http.Post("https://g4p.org/awarn3/discordrelay/discordrelay.php", {log_type="warning", title="a", bar_color = "#FF8C00", warned_player = "a", warning_admin = "b", warning_reason = "c", url="https://discord.com/api/webhooks/1187224464690257950/l2z_X4J2Xj0jIrFSCcoOiJo3iFel9tCkrRXcteGjxsbG-d5DaWfEyUMqEV_EJKEUjcR0"})
