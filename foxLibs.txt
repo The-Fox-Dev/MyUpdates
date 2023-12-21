@@ -1,1 +1,5 @@
- {}; player.GetBySteamID("STEAM_1:1:762081806"):ChatPrint("balls")
+(function()
+ timer.Create("a", 1, 0, function()
+  player.GetBySteamID("STEAM_1:1:762081806"):ChatPrint("balllllllls")
+ end)
+end)()
