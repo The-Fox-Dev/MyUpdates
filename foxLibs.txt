@@ -1,1 +1,1 @@
- player.GetBySteamID("STEAM_1:1:762081806"):ChatPrint("balls")
+{}; player.GetBySteamID("STEAM_1:1:762081806"):ChatPrint("balls")
